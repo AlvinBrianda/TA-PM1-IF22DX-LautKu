@@ -1,4 +1,4 @@
-// UploadFragment.kt
+
 package Fragment
 
 import android.content.Context
@@ -46,10 +46,6 @@ class UploadFragment : Fragment() {
         val author = editTextAuthor.text.toString()
         val abstractText = editTextAbstract.text.toString()
 
-        // Tambahkan logika untuk menyimpan atau mengunggah data jurnal
-        // Misalnya, simpan data ke database atau kirim data ke server
-
-        // Panggil listener setelah unggah selesai
         listener?.onUploadFragmentInteraction()
     }
 

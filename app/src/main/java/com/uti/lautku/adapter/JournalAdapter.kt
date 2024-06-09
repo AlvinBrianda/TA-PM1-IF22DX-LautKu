@@ -1,4 +1,3 @@
-// JournalAdapter.kt
 package com.uti.lautku.adapter
 
 import android.content.Context

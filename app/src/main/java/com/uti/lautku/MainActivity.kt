@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
 
     private lateinit var journalList: ListView
     private lateinit var journalAdapter: JournalAdapter
-    private val papers = mutableListOf<JournalPaper>() // Contoh data jurnal
+    private val papers = mutableListOf<JournalPaper>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
