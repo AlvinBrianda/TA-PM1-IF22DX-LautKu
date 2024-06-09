@@ -2,4 +2,9 @@
     <string name="app_name">LautKu</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="kirim_hasil_jurnal">Kirim Hasil Jurnal</string>
+    <string name="judul_penelitian">Judul Penelitian</string>
+    <string name="penulis">Penulis</string>
+    <string name="abstrak">Abstrak</string>
+    <string name="kirim">Kirim</string>
 </resources>

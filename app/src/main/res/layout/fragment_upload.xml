@@ -9,7 +9,7 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Kirim Hasil Jurnal"
+        android:text="@string/kirim_hasil_jurnal"
         android:gravity="center"
         android:textSize="24sp"
         android:padding="16dp"/>
@@ -18,7 +18,8 @@
         android:id="@+id/title_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Judul Penelitian"
+        android:hint="@string/judul_penelitian"
+        android:importantForAutofill="no"
         android:padding="16dp"
         android:inputType="text"/>
 
@@ -26,7 +27,8 @@
         android:id="@+id/author_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Penulis"
+        android:hint="@string/penulis"
+        android:importantForAutofill="no"
         android:padding="16dp"
         android:inputType="text"/>
 
@@ -34,7 +36,8 @@
         android:id="@+id/abstract_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Abstrak"
+        android:hint="@string/abstrak"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:minLines="3" />
 
@@ -42,5 +45,5 @@
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kirim" />
+        android:text="@string/kirim" />
 </LinearLayout>
