@@ -20,17 +20,15 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Buat contoh data jurnal
         papers.add(JournalPaper("Judul 1", "Penulis 1", "Abstrak 1"))
         papers.add(JournalPaper("Judul 2", "Penulis 2", "Abstrak 2"))
-        // Tambahkan data jurnal lainnya sesuai kebutuhan
 
-        // Inisialisasi daftar jurnal dan adapter
+
         journalList = findViewById(R.id.journal_list)
         journalAdapter = JournalAdapter(this, papers)
         journalList.adapter = journalAdapter
 
-        // Atur aksi ketika item di daftar jurnal diklik
+
         journalList.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
             val selectedJournalPaper = papers[position]
             intent.putExtra("paper_title", selectedJournalPaper.title)
