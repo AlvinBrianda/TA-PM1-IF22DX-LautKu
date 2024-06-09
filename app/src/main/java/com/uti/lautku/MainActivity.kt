@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
 
             Toast.makeText(this, "Unggah berhasil", Toast.LENGTH_SHORT).show()
 
-            :
+
             supportFragmentManager.popBackStack()
         }
 
