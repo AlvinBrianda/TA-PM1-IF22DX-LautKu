@@ -36,9 +36,8 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
         }
     }
 
-    // Fungsi untuk menangani klik tombol unggah
     fun onUploadButtonClick() {
-        // Buka UploadFragment saat tombol unggah diklik
+
         val uploadFragment = UploadFragment()
         supportFragmentManager.beginTransaction()
             .replace(androidx.fragment.R.id.fragment_container_view_tag,uploadFragment)
@@ -46,18 +45,13 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
             .commit()
     }
 
-    // Implementasi fungsi dari UploadFragmentListener
 
         override fun onUploadFragmentInteraction() {
-            // Tambahkan logika untuk menangani interaksi dengan UploadFragment jika diperlukan
-            // Misalnya, tampilkan pesan sukses atau lakukan aksi lain setelah unggah selesai
-            // Contoh:
+
             Toast.makeText(this, "Unggah berhasil", Toast.LENGTH_SHORT).show()
 
-            // Jika Anda ingin melakukan sesuatu setelah unggah berhasil, tambahkan kode di sini
-            // Misalnya, muat ulang daftar jurnal atau tampilkan tampilan lain
-            // Contoh:
-            supportFragmentManager.popBackStack() // Kembali ke tampilan sebelumnya setelah unggah selesai
+            :
+            supportFragmentManager.popBackStack()
         }
 
 
