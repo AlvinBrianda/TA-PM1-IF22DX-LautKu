@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity(), UploadFragment.UploadFragmentListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        papers.add(JournalPaper("Judul 0", "Penulis 0", "Abstrak 0"))
         papers.add(JournalPaper("Judul 1", "Penulis 1", "Abstrak 1"))
+        papers.add(JournalPaper("Judul 2", "Penulis 2", "Abstrak 2"))
 
 
         journalList = findViewById(R.id.journal_list)
