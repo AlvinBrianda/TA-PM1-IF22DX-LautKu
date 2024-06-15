@@ -1,3 +1,5 @@
+import org.gradle.configurationcache.serialization.codecs.Binding
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -33,6 +35,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    viewBinding {
+        enable = true
+    }
+
 }
 
 dependencies {

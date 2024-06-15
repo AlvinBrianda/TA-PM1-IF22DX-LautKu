@@ -18,11 +18,12 @@
         android:layout_marginBottom="16dp"/>
 
     <Button
+        android:id="@+id/uploadButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Unggah Hasil Penelitian"
+        android:layout_marginBottom="16dp"
         android:onClick="onUploadButtonClick"
-        android:layout_marginBottom="16dp"/>
+        android:text="Unggah Hasil Penelitian" />
 
     <ListView
         android:id="@+id/journal_list"

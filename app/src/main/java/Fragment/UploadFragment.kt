@@ -1,69 +1,54 @@
 
-package Fragment
+package com.uti.lautku.Fragment
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.uti.lautku.R
+import com.uti.lautku.databinding.FragmentUploadBinding
+
+interface UploadFragmentListener {
+    fun onUploadFragmentInteraction()
+}
 
 class UploadFragment : Fragment() {
 
-    private var listener: UploadFragmentListener? = null
-
-    private lateinit var editTextTitle: EditText
-    private lateinit var editTextAuthor: EditText
-    private lateinit var editTextAbstract: EditText
+    private var _binding: FragmentUploadBinding? = null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_upload, container, false)
+        _binding = FragmentUploadBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        editTextTitle = view.findViewById(R.id.title_input)
-        editTextAuthor = view.findViewById(R.id.author_input)
-        editTextAbstract = view.findViewById(R.id.abstract_input)
-
-        val buttonSubmit: Button = view.findViewById(R.id.submit_button)
-        buttonSubmit.setOnClickListener {
-            onSubmitButtonClick()
+        // Gunakan binding untuk mengakses tampilan di layout
+        binding.uploadButton.setOnClickListener {
+            // Tambahkan logika yang ingin dijalankan saat tombol diklik
+            handleUploadButtonClick()
         }
     }
+    private fun handleUploadButtonClick() {
+        // Logic to handle upload button click
+        val title = binding.uploadEditText.text.toString().trim()
 
-    private fun onSubmitButtonClick() {
-        // Ambil data dari EditText
-        val title = editTextTitle.text.toString()
-        val author = editTextAuthor.text.toString()
-        val abstractText = editTextAbstract.text.toString()
-
-        listener?.onUploadFragmentInteraction()
-    }
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is UploadFragmentListener) {
-            listener = context
+        if (title.isNotEmpty()) {
+            // Lakukan sesuatu dengan judul, misalnya mengunggahnya atau mengirim kembali ke aktivitas
+            Toast.makeText(requireContext(), "Judul diunggah: $title", Toast.LENGTH_SHORT).show()
         } else {
-            throw RuntimeException("$context must implement UploadFragmentListener")
+            Toast.makeText(requireContext(), "Judul tidak boleh kosong", Toast.LENGTH_SHORT).show()
         }
     }
 
-    override fun onDetach() {
-        super.onDetach()
-        listener = null
-    }
-
-    interface UploadFragmentListener {
-        fun onUploadFragmentInteraction()
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
