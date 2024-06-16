@@ -3,7 +3,6 @@ package com.uti.lautku
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
-import android.widget.Toast
 import com.uti.lautku.adapter.JournalAdapter
 import com.uti.lautku.databinding.ActivityMainBinding
 import com.uti.lautku.model.JournalPaper

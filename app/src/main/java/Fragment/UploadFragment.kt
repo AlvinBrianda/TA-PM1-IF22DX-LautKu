@@ -1,4 +1,3 @@
-
 package com.uti.lautku.Fragment
 
 import android.os.Bundle
@@ -29,18 +28,15 @@ class UploadFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Gunakan binding untuk mengakses tampilan di layout
         binding.uploadButton.setOnClickListener {
-            // Tambahkan logika yang ingin dijalankan saat tombol diklik
             handleUploadButtonClick()
         }
     }
+
     private fun handleUploadButtonClick() {
-        // Logic to handle upload button click
         val title = binding.uploadEditText.text.toString().trim()
 
         if (title.isNotEmpty()) {
-            // Lakukan sesuatu dengan judul, misalnya mengunggahnya atau mengirim kembali ke aktivitas
             Toast.makeText(requireContext(), "Judul diunggah: $title", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(requireContext(), "Judul tidak boleh kosong", Toast.LENGTH_SHORT).show()
